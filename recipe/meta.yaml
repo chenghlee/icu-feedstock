@@ -35,6 +35,7 @@ requirements:
     - {{ compiler('cxx') }}
     - make     # [unix]
   host:
+    - vc 14  # [win and py>=35]
   run:
 
 test:
