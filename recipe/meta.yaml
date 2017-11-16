@@ -16,9 +16,7 @@ source:
     - icu-config.patch  # [win]
 
 build:
-  number: 0
-  features:
-    - vc{{ vc }}  # [win]
+  number: 1
   run_exports:
     # icu changes their file extension with each major rev.  Default pin OK.
     - {{ pin_subpackage('icu') }}
