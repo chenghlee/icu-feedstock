@@ -19,7 +19,6 @@ if [[ "$CONDA_BUILD_CROSS_COMPILATION" == "1" ]]; then
       --disable-samples \
       --disable-extras \
       --disable-layout \
-      --enable-static \
       --disable-tests
     make -j${CPU_COUNT}
     EXTRA_OPTS="$EXTRA_OPTS --with-cross-build=$PWD"
@@ -37,7 +36,6 @@ fi
             --disable-extras      \
             --disable-layout      \
             --disable-tests       \
-            --enable-static       \
             ${EXTRA_OPTS}
 
 make -j${CPU_COUNT} ${VERBOSE_CM}

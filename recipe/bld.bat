@@ -40,6 +40,7 @@ FOR /F "delims=" %%i in ('cygpath.exe -u "%LIBRARY_PREFIX%"') DO set "PREFIX=%%i
 set CC=cl.exe
 set CXX=cl.exe
 
+bash -lc "./runConfigureICU Cygwin/MSVC"
 bash -lc "./build.sh"
 if errorlevel 1 exit 1
 

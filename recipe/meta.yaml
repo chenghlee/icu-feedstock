@@ -25,6 +25,7 @@ build:
   run_exports:
     # icu changes their file extension with each major rev.  Default pin OK.
     - {{ pin_subpackage('icu') }}
+  skip: True  # [win and vc!=14]
 
 requirements:
   build:
@@ -34,6 +35,8 @@ requirements:
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
     - make     # [unix]
+    - python   # [win]
+    - posix    # [win]
   host:
   run:
 
