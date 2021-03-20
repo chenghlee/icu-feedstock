@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 {% set version = "68.1" %}
-=======
-{% set version = "60.2" %}
->>>>>>> df85694d3f788a16a5e4eb025f47dee0b306353e
 {% set version_under = version.replace(".", "_") %}
 {% set version_hyphen = version.replace(".", "-") %}
 
